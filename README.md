@@ -1,34 +1,26 @@
-# codeigniter4-php-telegram-bot-starter
-This is a template straight from India to easily launch a Telegram bot with Codeigniter4
+Telegram bot for feedback!
 
 ## How to install it
 
-Use composer:
+Downloading zip or use git:
 ```
-composer create-project iyamk/codeigniter4-php-telegram-bot-starter bot
+git clone https://github.com/iyamk/telegram-bot-feedback.git
 ```
 
-## How to set it up
+## How to configure this nonsense?
 
-Open the .env file and change bot_api_key and bot_username there to your bot key and bot nickname
-Also change app.baseURL to link to your site
+Edit these lines in env file:
+```
+CI_ENVIRONMENT = production
+bot_api_key = '<YOUR BOT KEY>'
+bot_username = '<YOUR BOT USERNAME>'
+bot_admin_user_id = '<YOUR USER ID IN TELEGRAM>'
+app.baseURL = '<PLEASE INDICATE THE LINK TO THE SITE IF YOU ARE USING HOSTING>'
+```
+Rename the **env** file to **.env**
 
-Now upload all files to your hosting
+Run **longpool.sh** and I think hosting for such a bot is not really needed
 
-Then go to the site and connect the webhook using the address: [YOUR_SITE]/bot_set
+## About the bot
 
-You will see a message that everything is successful
-
-Now test the bot, run it and enter Hi
-
-## Run via longpoll
-
-Run longpool.sh from the project folder
-
-This will run longpool with a frequency of 1 time per second without mysql
-
-## Details
-
-This template is designed for secure deployment of an apache server; if you install on nginx, then configure it yourself
-
-This package costs $10, but I am giving it to you for free, so use it and read Sri Ramana
+This bot, as an experiment, turned out to be excrement, because it is not convenient as in python and it would be possible to do without the php-telegram-bot library, which in turn is written poorly and it is impossible to write powerful bots on it for $1000
